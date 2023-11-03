@@ -1,331 +1,317 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
-}
-
-ol, ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-header{
-    background-color: rgba(34, 33, 31, 0.85);
-    display:flex;
-    align-items: center;
-    justify-content: space-between ;
-}
-
-header a i{
-    color: white;
-    font-size: 3em;
-    padding: 0.5em;
-}
-
-header nav ul{
-    display:flex;
-    gap: 1.1em;
-    margin: 0 1em 0 0;
-}
-
-header nav ul li a{
-    color: white
-}
-
-.seccion-1{
-    background-color: rgb(219, 222, 243);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /*flex-direction: column;*/
-    align-items: center;
-    /*padding: 2em;*/
-}
-
-.acerca-imagen img{
-    width: 13em;
-    border: 1em solid rgba(48, 49, 117, 0.212);
-    border-radius: 25% 10%;
-}
-
-.parrafo{
-    padding-right: 3em;
-    text-align:justify;
-}
-
-.tlorem{
-    display:none;
-}
-
-.seccion-2 img{
-    width: 100%;
-    height: 400px;
-    /*background-image: url(img/ImgCarrusel.jpg);
-    background-position: 0%;
-    background-size: cover;*/
-    border-radius: 150px;
-}
-
-.seccion-3{
-    width: 100%;
-    background-color: rgba(240, 240, 122, 0.76);
-    margin-top: -20px;
-    border: 0px solid black;
-}
-
-.seccion-3 h2{
-    padding: 1em;
-    color:rgb(61, 61, 177);
-}
-.trabajo{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.trabajo div{
-    width: 50%;
-    padding: 1em;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.trabajo div img{
-    height: 100px;
-    display: block;
-    margin: auto;
-}
-
-.trabajo div p{
-    text-align:justify;
-}
-
-#footer{
-    padding: 1em; 
-    background-color: rgb(202, 202, 221);
-}
-
-#footer h3{
-    color: rgba(255, 0, 0, 0.527);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif , sans-serif;
-}
-
-#footer nav ul{
-    margin: 0;
-    padding: 0;
-}
-
-#footer nav ul li a{
-    color: rgba(104, 101, 101, 0.87);
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: oblique;
-    font-weight: 550;
-}
-
-a i.fa-solid.fa-heart.fixed{
-    position: fixed;
-    bottom: 22px;
-    right: 39px;
-}
-/*MENU*/
-#check{
-    display: none;
-}
-
-.checkbtn{
-    font-size: 25.px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-/*MEDIA QUERIES*/
-@media (max-width: 768px){
+/*CONFIGURACIONES INICIALES*/
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    ol, ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+/*ENCABEZADO*/
     header{
-        background-color: burlywood;
+        background-color: rgba(34, 33, 31, 0.85);
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .fuente-acento{
+        font-family: 'Raleway', sans-serif;
+        color: aqua;
+    }
+    header a i{/*corazón insertado*/
+        color: white;
+        font-size: 3em;
+        padding: 0.5em;
+    }
+    /*MENU CELULARES*/
+        #check{
+            display: none;
+        }
+        .checkbtn{
+            font-size: 25.px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+    /*MENU PC*/
+        .menu-inicial{
+            display:flex;
+            gap: 1.1em;
+            margin: 0 1em 0 0;
+            font-family: 'Raleway', sans-serif;
+        }
+        .menu-inicial li a{
+            color: white;
+        }
+/*SECCION 1*/
+    .seccion-1{
+        background-color: rgb(219, 222, 243);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
     .acerca-de{
-        text-align: center;
-    }
-    .acerca-imagen{
-        margin-bottom: 40px;
-    }
-    h2.fuente-acento{
-        text-align: center;
-    }
-    .checkbtn{
-        display: block;
-    }
-    #encabezado ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        text-align: center;
-
-        top: 80px;
-        left: 100%;
-        transition: all 0.5s;
-    }
-    #check:checked ~ ul{
-        left: 0;
-        display: block;
-    }
-    #encabezado nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    #encabezado nav ul li a{
+        width: 60%;
         font-size: 20px;
     }
-    #check:checked ~ .checkbtn{
-        color: #2c3e50;
+    .acerca-de h2{
+        font-family: 'Raleway', sans-serif;
     }
-}
-
-
-/* ------------- Encabezado Contacto ------------- */
-  
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-header {
-    text-align: center;
-    background-color: #f6f7f8;
-    border: 1px solid #d6d9dc;
-    border-radius: 3px;
-  
-    width: 80%;
-    margin: 10px auto;
-    padding: 50px;
-  }
-  
-  .form-header h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  /* ------------- Formulario ------------- */
-  
-  .formulario {
-    background-color: #f6f7f8;
-    border: 1px solid #d6d9dc;
-    border-radius: 3px;
-  
-    width: 90%;
-    padding: 50px;
-    margin: 30px 0 40px 0;
-  }
-
-  /* ------------- Campos del Formulario ------------- */
-
-  .form-row {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
+    .parrafo{
+        text-align:justify;
     }
-  
-  .form-row input[type="text"] {
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
-  }
-
-  .form-row input[type="email"] {
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
-    
-  }
-  .form-row label {
-    margin-bottom: 3px;
-    text-align: initial;
-  }
-
-  .form-row textarea {
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
-    
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    
-    min-height: 200px;
-    margin-bottom: 10px;
-    padding: 7px;
-    resize: none;
-    
-    width: 100%;
-  }
-
-  .form-row button {
-    font-size: 16px;
-    font-weight: bold;
-    
-    color: #ffffff;
-    background-color: #5995da;
-    
-    border: none;
-    border-radius: 3px;
-    
-    padding: 10px 40px;
-    cursor: pointer;
-  }
-    
-  .form-row button:hover {
-    background-color: #76aeed;
-  }
-    
-  .form-row button:active {
-    background-color: #407fc7;
-  }
-
-  /* ------------- Para Pantallas de más de 700px ------------- */
-@media only screen and (min-width: 768px) {
+    .acerca-imagen img{
+        width: 13em;
+        border: 1em solid rgba(48, 49, 117, 0.212);
+        border-radius: 25% 10%;
+    }
+/*SECCION 2*/
+    .seccion-2 img{
+        width: 100%;
+    }
+/*SECCION 3*/
+    .seccion-3{
+        background-color: rgba(240, 240, 122, 0.76);
+        font-size: 20px;
+    }
+    .seccion-3 h2{
+        font-family: 'Raleway', sans-serif;
+        padding: 1em;
+        color:rgb(61, 61, 177);
+    }
+    .trabajo{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .trabajo div{
+        width: 400px;
+        padding: 1em;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        overflow: hidden;
+        border: 0.5px solid rgb(209, 208, 208);
+        margin-bottom: 20px;
+    }
+    .trabajo h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .trabajo img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .trabajo p{
+        margin-bottom: 20px;
+    }
+/*FORMULARIO*/
+    /* ------------- Encabezado Contacto ------------- */
     .form-header {
-      padding: 50px;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+        background-color: #f6f7f8;
+        border: 1px solid #d6d9dc;
+        border-radius: 3px;
+    
+        width: 90%;
+        margin: 10px auto;
+        padding: 25px 25px 5px 25px;
     }
+    .form-header h1 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    /* ------------- Formulario ------------- */
+    .formulario {
+        background-color: #f6f7f8;
+        border: 1px solid #d6d9dc;
+        border-radius: 3px;
+    
+        width: 100%;
+        padding: 20px 20px 5px 20px;
+        margin: 30px 30px 20px 30px;
+
+        font-family: 'Raleway', sans-serif;
+    }
+    /* ------------- Campos del Formulario ------------- */
     .form-row {
-      flex-direction: row;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-    .form-row label {
-        text-align: right;
-        width: 120px;
-        margin-top: 7px;
-        padding-right: 0px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     .form-row input[type="text"] {
-      width: 250px;
-      height: initial;
+        background-color: #bdbdbd;
+        border: 0;
+        border-radius: 6px;
+        width: 100%;
+        padding: 7px;
+        font-size: 14px;
     }
     .form-row input[type="email"] {
-      width: 250px;
-      height: initial;
+        background-color: #bdbdbd;
+        border: 0;
+        border-radius: 6px;
+        width: 100%;
+        padding: 7px;
+        font-size: 14px;        
+    }
+    .form-row label {
+        margin-bottom: 3px;
+        text-align: initial;
     }
     .form-row textarea {
-        width: 250px;
-      }
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 14px;
+        
+        background-color: #bdbdbd;
+        border: 0;
+        border-radius: 6px;
+        
+        min-height: 200px;
+        margin-bottom: 10px;
+        padding: 7px;
+        resize: none;
+    }
     .form-row button {
-        margin-left: 120px;
-      }
+        font-size: 16px;
+        font-weight: bold;
+        
+        color: #ffffff;
+        background-color: #5995da;
+        
+        border: none;
+        border-radius: 3px;
+        
+        padding: 10px 40px;
+        cursor: pointer;
+    }
+    .form-row button:hover {
+        background-color: #76aeed;
+    }
+    .form-row button:active {
+        background-color: #407fc7;
+    }
+    .form-header p{
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 72, 0)
+    }
+/*REDES SOCIALES*/
+    #footer{
+        padding: 1em; 
+        background-color: rgb(202, 202, 221);
+    }
+    #footer h3{
+        color: rgba(255, 0, 0, 0.527);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif , sans-serif;
+    }
+    #footer nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    #footer nav ul li a{
+        color: rgba(104, 101, 101, 0.87);
+        font-family:Arial, Helvetica, sans-serif;
+        font-style: oblique;
+        font-weight: 550;
+    }
+    a i.fa-solid.fa-heart.fixed{
+        position: fixed;
+        bottom: 22px;
+        right: 39px;
+    }
+/*MEDIA QUERIES*/
+    @media (max-width: 760px){
+        header{
+            background-color: burlywood;
+        }
+        .checkbtn{
+            display: block;
+        }
+        #encabezado ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            text-align: center;
+    
+            top: 80px;
+            left: 100%;
+            transition: all 0.2s;
+        }
+        #check:checked ~ ul{
+            left: 0;
+            display: block;
+        }
+        #encabezado nav ul li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        #encabezado nav ul li a{
+            font-size: 20px;
+        }
+        #check:checked ~ .checkbtn{
+            color: #2c3e50;
+        }
+        .acerca-de{
+            text-align: center;
+        }
+        .seccion-1{
+            flex-direction: column;
+        }
+        #encabezado{
+            justify-content:end;
+            gap: 29%;
+        }
+        .seccion-3 h2{
+            text-align: center;
+        }
+    }
+    @media only screen and (min-width: 760px) {
+    /*FORMULARIO*/
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-header {
+            align-items: center;
+        }
+        .form-row {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .form-row label {
+            text-align: right;
+            width: 120px;
+            margin-top: 7px;
+            padding-right: 0px;
+        }
+        .form-row input[type="text"] {
+            width: 450px;
+            height: initial;
+        }
+        .form-row input[type="email"] {
+            width: 450px;
+            height: initial;
+        }
+        .form-row textarea {
+            width: 450px;
+        }
+        .form-row button {
+            margin-left: 120px;
+        }
     }
